@@ -318,7 +318,7 @@ const WebRTCPage = () => {
           else {
             addLog(`Received event: ${JSON.stringify(data)}`);
           }
-        } catch (error) {
+        } catch {
           addLog(`Received non-JSON message: ${e.data}`, true);
         }
       };
@@ -862,3 +862,4 @@ const WebRTCPage = () => {
 };
 
 export default WebRTCPage;
+
