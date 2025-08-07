@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FaMicrophone, FaComment, FaHeartbeat, FaCog } from 'react-icons/fa';
+import { FaMicrophone, FaComment, FaHeartbeat, FaCog, FaTachometerAlt } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
