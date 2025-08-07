@@ -7,7 +7,6 @@ import {
   FaClock, 
   FaUserMd, 
   FaPhone, 
-  FaEnvelope, 
   FaMapMarkerAlt,
   FaPlus,
   FaEdit,
