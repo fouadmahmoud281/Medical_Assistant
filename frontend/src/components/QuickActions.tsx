@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { 
-  FaPlus, 
   FaCalendarAlt, 
   FaPrescriptionBottleAlt, 
   FaChartBar, 
