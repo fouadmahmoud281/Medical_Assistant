@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FaMicrophone, FaComment, FaHeartbeat, FaCog } from 'react-icons/fa';
+import { FaMicrophone, FaComment, FaHeartbeat, FaCog, FaTachometerAlt } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -51,6 +51,17 @@ const Navbar = () => {
         <div className="flex justify-end h-12 px-4">
           <div className="flex space-x-1">
             <Link 
+              to="/dashboard" 
+              className={`flex items-center px-4 h-full text-sm font-medium transition-all ${
+                location.pathname === '/dashboard' 
+                  ? 'text-teal-600 border-b-2 border-teal-500' 
+                  : 'text-gray-600 hover:text-teal-600'
+              }`}
+            >
+              <FaTachometerAlt className="mr-2" />
+              <span>Dashboard</span>
+            </Link>
+            <Link 
               to="/" 
               className={`flex items-center px-4 h-full text-sm font-medium transition-all ${
                 location.pathname === '/' 
@@ -90,3 +101,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

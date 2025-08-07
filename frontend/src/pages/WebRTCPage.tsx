@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import LogPanel from '../components/LogPanel';
-import { FaMicrophone, FaMicrophoneSlash, FaPlay, FaStop, FaPaperPlane, FaCalendarAlt, FaHeartbeat, FaUser, FaMapMarkerAlt, FaPhone, FaClock, FaHospital, FaComments, FaTrash } from 'react-icons/fa';
+import { FaMicrophone, FaMicrophoneSlash, FaPlay, FaStop, FaPaperPlane, FaCalendarAlt, FaHeartbeat, FaUser, FaMapMarkerAlt, FaPhone, FaClock, FaHospital, FaComments, FaTrash, FaCog } from 'react-icons/fa';
 
 // Arabic system prompt for the medical assistant
 const ARABIC_SYSTEM_PROMPT = `أنت مساعد طبي يتحدث باللهجة المصرية، متخصص في حجوزات العيادات والمستشفيات. مهمتك هي مساعدة المرضى في حجز مواعيد، الإجابة على استفساراتهم عن الأطباء المتاحين، ساعات العمل، وشرح الإجراءات الطبية البسيطة. يجب أن تكون ودودًا ومتعاطفًا ومطمئنًا. تحدث دائماً باللهجة المصرية العامية، واستخدم التعبيرات الشائعة مثل "إزيك"، "عامل إيه"، "إن شاء الله"، "الحمد لله". احرص على إظهار التعاطف عند التعامل مع المرضى المتوترين، وقدم معلومات دقيقة لكن بطريقة مبسطة. إذا لم تكن متأكدًا من معلومة طبية معينة، احرص على التوضيح أنك ستحتاج للتأكد من الطبيب المختص.`;
@@ -318,7 +318,7 @@ const WebRTCPage = () => {
           else {
             addLog(`Received event: ${JSON.stringify(data)}`);
           }
-        } catch (error) {
+        } catch {
           addLog(`Received non-JSON message: ${e.data}`, true);
         }
       };
@@ -462,7 +462,7 @@ const WebRTCPage = () => {
     return () => {
       stopConversation();
     };
-  }, []);
+  }, [stopConversation]);
 
   // Departments data (for UI only)
   const departments = [
@@ -862,3 +862,5 @@ const WebRTCPage = () => {
 };
 
 export default WebRTCPage;
+
+

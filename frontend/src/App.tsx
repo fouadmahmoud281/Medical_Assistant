@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import WebRTCPage from './pages/WebRTCPage';
 import WebSocketPage from './pages/WebSocketPage';
+import DashboardPage from './pages/DashboardPage';
 import { FaSpinner } from 'react-icons/fa';
 import React from 'react';
 function App() {
@@ -36,6 +37,7 @@ function App() {
             </div>
           }>
             <Routes>
+              <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/" element={<WebRTCPage />} />
               <Route path="/websocket" element={<WebSocketPage />} />
               <Route path="*" element={
@@ -85,3 +87,4 @@ function App() {
 }
 
 export default App;
+

@@ -73,7 +73,7 @@ const WebSocketPage = () => {
         try {
           const data = JSON.parse(e.data);
           addLog(`Received: ${JSON.stringify(data)}`);
-        } catch (error) {
+        } catch {
           addLog(`Received non-JSON message: ${e.data}`);
         }
       };
@@ -146,7 +146,7 @@ const WebSocketPage = () => {
     return () => {
       disconnectWebSocket();
     };
-  }, []);
+  }, [disconnectWebSocket]);
   
   return (
     <div className="max-w-3xl mx-auto">
@@ -224,3 +224,4 @@ const WebSocketPage = () => {
 };
 
 export default WebSocketPage;
+
