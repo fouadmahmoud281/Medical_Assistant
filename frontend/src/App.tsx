@@ -37,6 +37,7 @@ function App() {
             </div>
           }>
             <Routes>
+              <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/" element={<WebRTCPage />} />
               <Route path="/websocket" element={<WebSocketPage />} />
               <Route path="*" element={
@@ -86,3 +87,4 @@ function App() {
 }
 
 export default App;
+
