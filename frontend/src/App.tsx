@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import WebRTCPage from './pages/WebRTCPage';
 import WebSocketPage from './pages/WebSocketPage';
+import DashboardPage from './pages/DashboardPage';
 import { FaSpinner } from 'react-icons/fa';
 import React from 'react';
 function App() {
