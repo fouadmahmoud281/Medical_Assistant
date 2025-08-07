@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
 import { FaTrash } from 'react-icons/fa';
 
 interface LogMessage {
