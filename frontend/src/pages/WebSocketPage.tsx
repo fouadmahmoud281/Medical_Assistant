@@ -73,7 +73,7 @@ const WebSocketPage = () => {
         try {
           const data = JSON.parse(e.data);
           addLog(`Received: ${JSON.stringify(data)}`);
-        } catch (error) {
+        } catch {
           addLog(`Received non-JSON message: ${e.data}`);
         }
       };
