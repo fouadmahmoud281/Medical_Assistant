@@ -6,7 +6,6 @@ import {
   FaChartBar, 
   FaClock, 
   FaUserMd, 
-  FaHospital, 
   FaPhone, 
   FaEnvelope, 
   FaMapMarkerAlt,
