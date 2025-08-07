@@ -462,7 +462,7 @@ const WebRTCPage = () => {
     return () => {
       stopConversation();
     };
-  }, []);
+  }, [stopConversation]);
 
   // Departments data (for UI only)
   const departments = [
@@ -862,4 +862,5 @@ const WebRTCPage = () => {
 };
 
 export default WebRTCPage;
+
 
